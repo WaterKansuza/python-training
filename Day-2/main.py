@@ -52,3 +52,10 @@ age = int(input("Age: "))
 print("I'm" + str(age))
 #Vì chuỗi đi với chuỗi, số đi với số, nên age từ int phải chuyển về str để đi được với "I'm"
 # dấu " + " 
+
+# diễn đàn lập trình: "Dạy nhau học"
+# Nên xem từ chính chính chủ: "Phython.org"
+# Kho lưu trữ các thư viện trong python pypi.org
+# làm về phân tích dữ liệu, muốn lấy các dữ liệu thực tế: kaggle.com
+
+# Trang luyện tập HackerRank
