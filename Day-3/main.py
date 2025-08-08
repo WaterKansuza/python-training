@@ -1,136 +1,89 @@
-# "pip install autopep8"
-# "==" equal to
-# "!=" not equal to
-# > greater than
-# < less than
-# >= greater than or equal to
-# <= less than or equal to
+'''
+ "pip install autopep8"
+ "==" equal to
+ "!=" not equal to
+ > greater than
+ < less than
+ >= greater than or equal to
+ <= less than or equal to
+ list [] ko thể sửa
+ tuple () Không thể thay đổi, Có thứ tự cố định, dữ liệu được sắp xếp theo thứ tự được thêm vào.
+ dict {} có thể sửa, Không có thứ tự cố định, các phần tử không được sắp xếp theo một trật tự nào.
 
-#Bài 1
+/ -> float
+// -> int
+print(round(2.6)) -> sẽ làm tròn đến số gần nó nhất là 3 
+số chẵn sẽ làm tròn xuống
+số lẻ sẽ làm tròn lên
+print(round(2.6556, 2)) làm tròn sau dấu phẩy 2 chữ số
 
-import random
-#quest = input("Enter a question: ")
-#
-#first = "Yes - definitely"
-#second = "It is decidedly so."
-#third = "Without a doubt."
-#fourth = "Reply hazy, try again."
-#fifth = "Ask again later."
-#sixth = "Better not tell you now."
-#seventh = 'My sources say no.'
-#eighth = 'Outlook not so good.'
-#nineth = 'Very doubtful.'
-#
-#ans = random.randint(1, 9)
-#if ans == 1:
-#    print(first)
-#elif ans == 2:
-#    print(second)
-#elif ans == 3:
-#    print(third)
-#elif ans == 4:
-#    print(fourth)
-#elif ans == 5:
-#    print(fifth)
-#elif ans == 6:
-#    print(sixth)
-#elif ans == 7:
-#    print(seventh)
-#elif ans == 8:
-#    print(eighth)
-#elif ans == 9:
-#    print(nineth)
+mã AC2
+print('a' > 'b') -> False
+khi dùng ord('a') -> 97
+khi dùng chr(97) -> a
 
-# Bài 2
+Thứ tự giảm dần là: not and or
 
-#height = int(input("What is your height: "))
-#credits = int(input("How many credits do you have: "))
-#
-#if height >= 137 and credits >= 10:
-#    print('Enjoy the ride!')
-#elif height < 137 and credits >= 10:
-#    print('You are not tall enough to ride.')
-#elif height >= 137 and credits < 10:
-#    print('You don\'t have enough credits.')
-#else:
-#    print('You have not met either requirement.')
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+None Type:	NoneType
+'''
+'''
+def nhap_so():
+    return int(input("Nhập số: "))
 
-# Bài 3
-Gryffindor = 0
-Ravenclaw = 0
-Hufflepuff = 0
-Slytherin = 0
+def kiem_tra_chan_le(n):
+    if n % 2 == 0:
+        return "chẵn"
+    else:
+        return "lẻ"
+
+def hien_thi_ket_qua(ket_qua):
+    print("Số bạn nhập là số", ket_qua)
+
+so = nhap_so()
+ket_qua = kiem_tra_chan_le(so)
+hien_thi_ket_qua(ket_qua)
+
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
 
 
-print(''' Q1) Do you like Dawn or Dusk?
-    1) Dawn
-    2) Dusk
-''')
+print("Python is " + x)
+myfunc()
 
-a = int(input("Enter your choice: "))
+x = ["apple", "banana", "cherry"]
+print(type(x))
 
-if a == 1:
-    Gryffindor += 1 
-    Ravenclaw += 1
-elif a == 2:
-    Hufflepuff += 1 
-    Slytherin += 1
-else:
-    print('Wrong input.')
+a = "I am Quang"
+print(a[0:3])
+print("Quang" in a)
+print("Minh" not in a)
 
-print('''
-      Q2) When I\’m dead, I want people to remember me as:
-    1) The Good
-    2) The Great
-    3) The Wise
-    4) The Bold
-      ''')
+name = input("Tên: ")
+age = int(input("Tuổi: "))
+print(name, age, sep="|")  #nếu muốn cách giữa 2 từ bằng dấu nào đó
 
-b = int(input("Enter your choice: "))
+print(round(2.5666, 2))
+'''
 
-if b == 1:
-    Hufflepuff += 2
-elif b == 2:
-    Slytherin += 2
-elif b == 3:
-    Ravenclaw += 2
-elif b == 4:
-    Gryffindor += 2
-else:
-    print('Wrong input.')
+'''
+Bài toán tử 
 
-print('''
-      Q3) Which kind of instrument most pleases your ear?
-    1) The violin
-    2) The trumpet
-    3) The piano
-    4) The drum
-      ''')
-c = int(input("Enter your choice: "))
+print(1 > 2 and 4 > 5) -> False and False -> False
+print(False or True) -> True or False = True
 
-if c == 1:
-    Slytherin += 4
-elif c == 2:
-    Hufflepuff += 4
-elif c == 3:
-    Ravenclaw += 4
-elif c == 4:
-    Gryffindor += 4
-else:
-    print('Wrong input.')
+and => first if False else second
+python quy ước: 0 là False, 1 là True
+Falsy: 0, 0.0, 9j, None, (), [], set(), '' (giá trị trống)
+'''
 
-print('Your point is:')
-print(Gryffindor, 'Gryffindor')
-print(Ravenclaw, 'Ravenclaw')
-print(Hufflepuff, 'Hufflepuff')
-print(Slytherin, 'Slytherin')
-
-max = max(Gryffindor, Ravenclaw, Hufflepuff, Slytherin)
-if max == Gryffindor:
-    print('U r Gryffindor')
-elif max == Ravenclaw:
-    print('U R Ravenclaw')
-elif max == Hufflepuff:
-    print('U R Hufflepuff')
-else:
-    print('U R Slytherin')
+print(1 and 2)
