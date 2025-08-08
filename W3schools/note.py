@@ -99,6 +99,5 @@
 #Hàm này sắp xếp lại ngẫu nhiên các thành phần trong danh sách.
 
 
-# Import re
+# Import re (Regular Expression)
 # có thể sử dụng các hàm để làm việc với chuỗi
-

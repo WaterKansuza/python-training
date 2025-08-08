@@ -265,3 +265,70 @@
 #if __name__ == '__main__':
 #    n = int(input())
 #    print_rangoli(n)
+
+#!/bin/python3
+
+#import math
+#import os
+#import random
+#import re
+#import sys
+## Complete the solve function below.
+#def solve(s):
+#    new_s = s.split(' ')
+#    result = "".join(word.capitalize() for word in new_s)
+#    return result
+#
+#if __name__ == '__main__':
+#    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+#
+#    s = input()
+#
+#    result = solve(s)
+#
+#    fptr.write(result + '\n')
+#
+#    fptr.close()
+
+
+def minion_game(string):
+    kevin_score = 0
+    stuart_score = 0
+    vowels = ["A", "E", "I", "O", "U"]
+    list_string = list(string.upper())
+
+    for i in range(0, len(list_string)):
+        if list_string[i] in vowels:
+#            start_kevin = (list_string[i])
+            num_start_kevin = i
+            full_kevin = list_string[num_start_kevin:len(list_string)]
+            for e in range(1, len(full_kevin)):
+                all_comb_kevin = list_string[num_start_kevin, num_start_kevin+e]
+                for n in range(0, len(list_string)):
+                    if string[n:n+len(all_comb_kevin)] == all_comb_kevin:
+                        kevin_score += 1
+            break
+
+        if list_string[i] not in vowels:
+            num_start_stuart = i
+            full_stuart = list_string[num_start_stuart:len(list_string)]
+            for e in range(1, len(full_stuart)):
+                all_comb_stuart = list_string[num_start_stuart, num_start_stuart+e]
+                for n in range(0, len(list_string)):
+                    if string[n:n+len(all_comb_stuart)] == all_comb_stuart:
+                        stuart_score += 1
+            break
+        if kevin_score > stuart_score:
+            return kevin_score
+        elif stuart_score > kevin_score:
+            return stuart_score
+        elif kevin_score == stuart_score:
+            return print("Draw")
+
+#    for i in all_comb_kevin:
+
+
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
