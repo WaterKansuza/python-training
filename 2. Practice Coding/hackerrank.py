@@ -380,29 +380,98 @@
 
 # Nested Lists
 
-students = []
-scores = []
+#students = []
+#scores = []
+#
+#if __name__ == '__main__':
+#    for _ in range(int(input())):
+#        name = input()
+#        score = float(input())
+#        students.append([name, score])
+#        scores.append(score)
+#
+#lowest = min(scores)
+#filter_score_1st = []
+#for i in scores:
+#    if i != lowest:
+#        filter_score_1st.append(i)
+#
+#
+#second_lowest = min(filter_score_1st)
+#
+#
+#names = []
+#for i in range(len(students)):
+#    if students[i][1] == second_lowest:
+#        names.append(students[i][0])
+#sort_names = sorted(names)
+#print("\n".join(map(str, sort_names)))
 
-if __name__ == '__main__':
-    for _ in range(int(input())):
-        name = input()
-        score = float(input())
-        students.append([name, score])
-        scores.append(score)
-
-lowest = min(scores)
-filter_score_1st = []
-for i in scores:
-    if i != lowest:
-        filter_score_1st.append(i)
 
 
-second_lowest = min(filter_score_1st)
+#from itertools import permutations
+#
+#string, number = input().split()
+#string = sorted(string)
+#number = int(number)
+#
+#trans = list(permutations(string, int(number)))
+#for i in trans:
+#    print("".join(i))
 
 
-names = []
-for i in range(len(students)):
-    if students[i][1] == second_lowest:
-        names.append(students[i][0])
-sort_names = sorted(names)
-print("\n".join(map(str, sort_names)))
+
+#from itertools import combinations
+#
+#string, number = input().split()
+#string = sorted(string)
+#number = int(number)
+#all_list = []
+#one_string = "".join(string)
+#
+#
+#for i in range(1, number+1):
+#    comb = list(combinations(one_string, i))
+#    for e in comb:
+#        print("".join(e))
+
+#from itertools import combinations_with_replacement
+#
+#string, number = input().split()
+#string = sorted(string.upper())
+#number = int(number)
+#
+#comp = list(combinations_with_replacement(string, number))
+#for i in comp:
+#    print("".join(i))
+
+#from itertools import groupby
+#
+#string = list(map(int, input()))
+#b = []
+#for key, group in groupby(string):
+#    a = (len(list(group)), key)
+#    b.append(a)
+#print(" ".join(list(map(str, b))))
+
+# Introduction to Sets
+
+#def average(array):
+#    a = sum(set(arr))
+#    b = len(set(arr))
+#    result = a/b
+#    return result
+#if __name__ == '__main__':
+#    n = int(input())
+#    arr = list(map(int, input().split()))
+#    result = average(arr)
+#    print(result)
+
+# calendar
+
+#import calendar
+#
+#month, date, year = input().split()
+#
+#print((calendar.day_name[calendar.weekday(int(year), int(month), int(date))]).upper())
+
