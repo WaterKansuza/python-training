@@ -291,44 +291,118 @@
 #    fptr.close()
 
 
-def minion_game(string):
-    kevin_score = 0
-    stuart_score = 0
-    vowels = ["A", "E", "I", "O", "U"]
-    list_string = list(string.upper())
-
-    for i in range(0, len(list_string)):
-        if list_string[i] in vowels:
-#            start_kevin = (list_string[i])
-            num_start_kevin = i
-            full_kevin = list_string[num_start_kevin:len(list_string)]
-            for e in range(1, len(full_kevin)):
-                all_comb_kevin = list_string[num_start_kevin, num_start_kevin+e]
-                for n in range(0, len(list_string)):
-                    if string[n:n+len(all_comb_kevin)] == all_comb_kevin:
-                        kevin_score += 1
-            break
-
-        if list_string[i] not in vowels:
-            num_start_stuart = i
-            full_stuart = list_string[num_start_stuart:len(list_string)]
-            for e in range(1, len(full_stuart)):
-                all_comb_stuart = list_string[num_start_stuart, num_start_stuart+e]
-                for n in range(0, len(list_string)):
-                    if string[n:n+len(all_comb_stuart)] == all_comb_stuart:
-                        stuart_score += 1
-            break
-        if kevin_score > stuart_score:
-            return kevin_score
-        elif stuart_score > kevin_score:
-            return stuart_score
-        elif kevin_score == stuart_score:
-            return print("Draw")
+#def minion_game(string):
+#    kevin_score = 0
+#    stuart_score = 0
+#    vowels = ["A", "E", "I", "O", "U"]
+#    list_string = list(string.upper())
+#
+#    for i in range(0, len(list_string)):
+#        if list_string[i] in vowels:
+##            start_kevin = (list_string[i])
+#            num_start_kevin = i
+#            full_kevin = list_string[num_start_kevin:len(list_string)]
+#            for e in range(1, len(full_kevin)):
+#                all_comb_kevin = list_string[num_start_kevin, num_start_kevin+e]
+#                for n in range(0, len(list_string)):
+#                    if string[n:n+len(all_comb_kevin)] == all_comb_kevin:
+#                        kevin_score += 1
+#            break
+#
+#        if list_string[i] not in vowels:
+#            num_start_stuart = i
+#            full_stuart = list_string[num_start_stuart:len(list_string)]
+#            for e in range(1, len(full_stuart)):
+#                all_comb_stuart = list_string[num_start_stuart, num_start_stuart+e]
+#                for n in range(0, len(list_string)):
+#                    if string[n:n+len(all_comb_stuart)] == all_comb_stuart:
+#                        stuart_score += 1
+#            break
+#        if kevin_score > stuart_score:
+#            return kevin_score
+#        elif stuart_score > kevin_score:
+#            return stuart_score
+#        elif kevin_score == stuart_score:
+#            return print("Draw")
 
 #    for i in all_comb_kevin:
 
+# ĐÁP ÁN
 
+#def minion_game(string):
+#    vowels = ["A", "I", "U", "E", "O"]
+#    kevin_score = 0
+#    stuart_score = 0
+#    for i in range(0, len(string)):
+#        if string[i] in vowels:
+#            kevin_score += len(string) - i
+#        else:
+#            stuart_score += len(string) - i
+#    if kevin_score > stuart_score:
+#        print("Kevin", str(kevin_score))
+#    elif kevin_score < stuart_score:
+#        print("Stuart", str(stuart_score))
+#    else:
+#        print("Draw")
+#
+#if __name__ == '__main__':
+#    s = input()
+#    minion_game(s)
+
+#from itertools import product
+#
+#A = input().split()
+#B = input().split()
+#num_A = list(map(int, A))
+#num_B = list(map(int, B))
+#sort_A = num_A.sort()
+#sort_B = num_B.sort()
+#
+#product_AB = list(product(num_A, num_B))
+#print(" ".join(map(str, product_AB)))
+
+#from collections import Counter
+#
+#money = 0
+#X = int(input())                        #number of shoes
+#sizes = list(map(int, input().split())) #all shoes size
+#number_of_sizes = Counter(sizes)
+#N = int(input())                        #number of customers 
+#for i in range(N):
+#    size, price = map(int, input().split())
+#    if number_of_sizes[size] >= 1:
+#        number_of_sizes[size] -= 1
+#        money += price
+#    elif number_of_sizes[size] == 0:
+#        money += 0
+#print(money)
+
+
+# Nested Lists
+
+students = []
+scores = []
 
 if __name__ == '__main__':
-    s = input()
-    minion_game(s)
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        students.append([name, score])
+        scores.append(score)
+
+lowest = min(scores)
+filter_score_1st = []
+for i in scores:
+    if i != lowest:
+        filter_score_1st.append(i)
+
+
+second_lowest = min(filter_score_1st)
+
+
+names = []
+for i in range(len(students)):
+    if students[i][1] == second_lowest:
+        names.append(students[i][0])
+sort_names = sorted(names)
+print("\n".join(map(str, sort_names)))
