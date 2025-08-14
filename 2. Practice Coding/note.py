@@ -162,3 +162,16 @@
 #combinations_with_replacement
 # Giống combinations, nhưng cho phép lặp lại phần tử
 # [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]
+
+
+#6. Khi nào dùng defaultdict
+#Gom nhóm dữ liệu (grouping)
+#Đếm tần suất (frequency counting)
+#\/ <- cách sử dụng
+#from collections import defaultdict
+
+
+#nums = [1, 2, 3]
+#
+#print(nums)     # [1, 2, 3]
+#print(*nums)    # 1 2 3

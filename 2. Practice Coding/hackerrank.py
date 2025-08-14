@@ -475,3 +475,96 @@
 #
 #print((calendar.day_name[calendar.weekday(int(year), int(month), int(date))]).upper())
 
+#for i in range(int(input())):
+#    a, b = input().split()
+#    try:
+#        print(int(int(a)/int(b)))
+#    except ZeroDivisionError as i:
+#        print("Error Code: integer division or modulo by zero")
+#    except ValueError as e:
+#        print("Error Code:", e)
+
+# Polar Coordinates
+
+#from cmath import phase
+#
+#z = complex(input())
+#print(abs(z))
+#print(phase(z))
+
+# Find Angle MBC
+
+#import math
+#degree_symbol = chr(176)
+#AB = int(input())
+#BC = int(input())
+#
+#fl_AB = float(AB)
+#fl_BC = float(BC)
+#
+#C = math.atan(AB/BC)
+#degree_C = round(math.degrees(C))
+#
+#print(f"{degree_C}{degree_symbol}")
+
+
+# Triangle Quest 2
+
+#for i in range(1,int(input())+1): #More than 2 lines will result in 0 score. Do not leave a blank line also
+#    print((10**i//9)*(10**i//9))
+
+
+# Default Tutorial
+
+#Test
+
+#from collections import defaultdict
+#
+#n, m = list(map(int, input().split()))
+#d = defaultdict(list)
+#
+#list_A = []
+#list_B = []
+#
+#for i in range(1, n+1):
+#    A = (str(input()))
+#    list_A.append(A)
+#
+#for i in range(1, m+1, 1):
+#    B = (str(input()))
+#    list_B.append(B)
+#
+#for b in list_B:
+#    if b in list_A:
+#        for index, value in enumerate(list_A):
+#            if value == b:
+#                d[b] = e + 1
+#
+#    else:
+#        print(-1)
+
+#    for e in range(len(list_A)):
+#        if b == list_A[e]:
+#            print(e+1, end=" ")
+#        elif b != list_A[e]:
+#            pass
+
+# Answ
+#from collections import defaultdict
+#
+#n, m = map(int, input().split())
+#d = defaultdict(list)
+#
+## Lưu vị trí xuất hiện của từ trong Group A
+#for i in range(n):
+#    word = input().strip()
+#    d[word].append(i+1)  # +1 để thành chỉ số 1-indexed
+#
+## In kết quả cho Group B
+#for _ in range(m):
+#    word = input().strip()
+#    if word in d:
+#        print(*d[word])
+#    else:
+#        print(-1)
+
