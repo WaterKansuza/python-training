@@ -568,3 +568,111 @@
 #    else:
 #        print(-1)
 
+# Collections.namedtuple()
+
+#from collections import namedtuple
+#
+#N = int(input())
+#top = input().split()
+#total = 0
+#
+#for student in range(N):
+#    data = namedtuple('Students', top)
+#    ID, MARKS, NAME, CLASS = input().split()
+#    student = data(ID, MARKS, NAME, CLASS)
+#    total += int(student.MARKS)
+#print("{:.2f}".format(total/N))
+
+# Collections.OrderedDict()
+
+#from collections import OrderedDict
+#
+#N = int(input())
+#
+#market_list = OrderedDict()
+#market = OrderedDict()
+#names = []
+#prices = []
+#
+#for i in range(N):
+#    name, price = input().rsplit(' ', 1)
+#    names.append(name)
+#    prices.append(price)
+#    market_list[name] = price
+#for item in names:
+#    market[item] = market.get(item, 0) + 1
+#for i in market.items():
+#    for e in market_list.items():
+#        if i[0] == e[0]:
+#            print(i[0] +" " +str(int(i[1])*int(e[1])))
+
+# No Idea!
+
+#n, m = input().split()
+#arr = list(map(int, input().split()))
+#A = list(map(int, input().split()))
+#B = list(map(int, input().split()))
+#
+#happiness = sum((i in A) - (i in B) for i in arr)
+#print(happiness)
+
+# MY WAY
+
+#n, m = input().split()
+#arr = list(map(int, input().split()))
+#A = list(map(int, input().split()))
+#B = list(map(int, input().split()))
+#happiness = 0
+#for i in arr:
+#    if i in A:
+#        happiness += 1
+#    elif i in B:
+#        happiness -= 1
+#    else:
+#        happiness += 0
+#        
+#       
+#print(happiness)
+
+
+#Symmetric Difference
+
+#M = int(input())
+#list_M = set(map(int, input().split()))
+#N = int(input())
+#list_N = set(map(int, input().split()))
+#a = list_M.difference(list_N)
+#b = list_N.difference(list_M)
+#c = sorted(list(a) + list(b))
+#for i in c:
+#    print(i)
+
+# Set.add()
+
+# Set .discard(), .remove() & .pop()
+
+#M = int(input())
+#c = set()
+#for i in range(M):
+#    countries = input()
+#    c.add(countries)
+#print(len(list(c)))
+
+#n = int(input())
+#s = set(map(int, input().split()))
+#
+#N = int(input())
+#for i in range(N):
+#    a = input()
+#    if a == "pop":
+#        s.pop()
+#    else:
+#        b = a.split()
+#        if b[0] == "remove":
+#            s.remove(int(b[1]))
+#        elif b[0] == "discard":
+#            s.discard(int(b[1]))
+#        elif b[0] == "remove":
+#            s.remove(int(a[1]))
+#
+#print(sum(list(s)))

@@ -175,3 +175,38 @@
 #
 #print(nums)     # [1, 2, 3]
 #print(*nums)    # 1 2 3
+
+#>>> from collections import namedtuple
+#>>> Car = namedtuple('Car','Price Mileage Colour Class')
+#>>> xyz = Car(Price = 100000, Mileage = 30, Colour = 'Cyan', Class = 'Y')
+#>>> print xyz
+#Car(Price=100000, Mileage=30, Colour='Cyan', Class='Y')
+#>>> print xyz.Class
+#Y
+
+# OrderedDict là gì?
+#Nó là một dict đặc biệt trong module collections.
+#Khác biệt chính: giữ nguyên thứ tự các phần tử theo lúc bạn thêm vào.
+
+#n = int(input())
+#for i in range(n):
+#    word = list(input())
+#    print(word)
+#
+#>> a = {2, 4, 5, 9}
+#>> b = {2, 4, 11, 12}
+#>> a.union(b) # Values which exist in a or b
+#{2, 4, 5, 9, 11, 12}
+#>> a.intersection(b) # Values which exist in a and b
+#{2, 4}
+#>> a.difference(b) # Values which exist in a but not in b
+#{9, 5}
+
+# Set .union() Operation
+
+#n = int(input())
+#n_space = set(map(int, input().split()))
+#b = int(input())
+#b_space = set(map(int, input().split()))
+#c = n_space.union(b_space)
+#print(len(list(c)))
