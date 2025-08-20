@@ -210,3 +210,6 @@
 #b_space = set(map(int, input().split()))
 #c = n_space.union(b_space)
 #print(len(list(c)))
+
+#pip install opencv-python
+# Để tải thư viện để làm theo dõi chuyển động qua camera
